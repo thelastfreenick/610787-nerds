@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Nataly Mayorova](https://up.htmlacademy.ru/htmlcss/20/user/610787).
-* Наставник: [Владимир Кабыш].
+* Наставник: [Владимир Кабыш] (https://htmlacademy.ru/profile/kabysh).
 
 ---
 

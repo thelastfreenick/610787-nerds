@@ -8,7 +8,7 @@
       <header class="page-header">
          <nav class="main-menu">
             <a class="main-header-logo" href="index.html">
-            <img src="http://placehold.it/70x40">
+              <img src="img/nerds-logo.svg">
             </a>
             <ul class="site-navigation">
                <li><a href="#">Студия</a></li>
@@ -20,7 +20,9 @@
             </ul>
             <ul class="user-navigation">
                <!-- в макете тут корзина -->
-               <li class="login-link">Вход</li>
+               <li class="login-link"><a class="login-link" href="login.html">Корзина</a></li>
+
+
             </ul>
          </nav>
       </header>
@@ -30,7 +32,78 @@
       <main class="container">
          <section class="filters">
             <h2 class="visually-hidden">Фильтр товаров</h2>
-            <!-- Здесь будет форма -->
+
+            <form class="filters-form" action="https://echo.htmlacademy.ru" method="post" oninput="price-outputoutput.value=price-outputcount.value">
+              <p class="filters-item">
+                <label for="range">Стоимость</label>
+                  <input type="range" min="0" max="15000" step="1">
+                  <div class="half-width output-area">
+                    <output name="price-output"></output>
+                  </div>
+              </p>
+
+              <fieldset>
+                      <legend>Сетка:</legend>
+                      <ul>
+                        <li>
+                          <input type="radio" name="layout" value="adaptive" id="filter-adaptive" checked>
+                          <label for="filter-adaptive">
+                            Адаптивная
+                          </label>
+                        </li>
+                        <li>
+                          <input type="radio" name="layout" value="fix" id="filter-fix">
+                          <label for="filter-fix">
+                            Фиксированная
+                          </label>
+                        </li>
+                        <li>
+                          <input type="radio" name="layout" value="another" id="filter-another">
+                          <label for="filter-another">
+                            Резиновая
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+
+              <fieldset>
+        <legend>Особенности:</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="slider" id="filter-slider" checked>
+            <label for="filter-slider">
+          Слайдер
+        </label>
+          </li>
+          <li>
+            <input type="checkbox" name="advanteges" id="filter-advanteges">
+            <label for="filter-advanteges">
+              Блок преимуществ
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" name="news" id="filter-news" checked>
+            <label for="filter-news">
+              Новости
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" name="galery" id="filter-galery">
+            <label for="filter-galery">
+              Галерея
+            </label>
+          </li>
+          <li>
+            <input type="checkbox" name="box" id="filter-box">
+            <label for="filter-box">
+           Корзина
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <button type="submit">Показать</button>
+
+            </form>
          </section>
          <section class="catalog">
             <h2 class="visually-hidden">Список шаблонов</h2>
@@ -105,6 +178,24 @@
                </address>
                <p class="phone">тел. +7 (812) 275-75-75</p>
                <a class="button" href="#">Напишите нам</a>
+
+               <section class="write-us">
+                 <h2>Напишите нам</h2>
+                 <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+                   <p class="write-us-item">
+                      <label for="name">Ваше имя</label>
+                        <input type="text" id="name" placeholder="Имя Фамилия">
+                    </p>
+                    <p class="write-us-item">
+                      <label for="email">Ваш e-mail</label>
+                        <input type="email" id="email" placeholder="email@example.com" required>
+                    </p>
+                    <p class="write-us-item">
+                      <textarea name="comment" id="comment-field" placeholder="В свободной форме">Текст письма</textarea>
+                    </p>
+                      <button class="button" type="submit">Отправить</button>
+                  </form>
+                      <button class="modal-close" type="button">Закрыть</button>
             </section>
          </section>
          <footer>
